@@ -8,6 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.9.0/dist/maplibre-gl.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.9.0/dist/maplibre-gl.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
@@ -328,41 +331,23 @@
 
         
     
-            var tile_layer_7bcd33a6e72182d26e93446a71304b63 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; OpenStreetMap contributors, \u0026copy; CARTO",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
+            var tile_layer_7bcd33a6e72182d26e93446a71304b63 = L.maplibreGL({
+  "style": "https://tiles.openfreemap.org/styles/positron",
+  "attribution": "\u0026copy; \u003ca href=\"https://openfreemap.org\"\u003eOpenFreeMap\u003c/a\u003e \u0026copy; \u003ca href=\"https://openmaptiles.org/\"\u003eOpenMapTiles\u003c/a\u003e Data from \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e",
+  "pane": "tilePane",
+  "interactive": false,
+});
         
     
             tile_layer_7bcd33a6e72182d26e93446a71304b63.addTo(map_7f13d7543c6fada59b473cb69aac2ce4);
         
     
-            var tile_layer_8db4d206cf61059879e5d8193d00125f = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; OpenStreetMap contributors, \u0026copy; CARTO",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
+            var tile_layer_8db4d206cf61059879e5d8193d00125f = L.maplibreGL({
+  "style": "https://tiles.openfreemap.org/styles/dark",
+  "attribution": "\u0026copy; \u003ca href=\"https://openfreemap.org\"\u003eOpenFreeMap\u003c/a\u003e \u0026copy; \u003ca href=\"https://openmaptiles.org/\"\u003eOpenMapTiles\u003c/a\u003e Data from \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e",
+  "pane": "tilePane",
+  "interactive": false,
+});
         
     
             var tile_layer_318a5ecd768b84bd434c19391aea4a0c = L.tileLayer(
